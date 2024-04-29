@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="position-absolute text-uppercase text-primary">PORTFOLIO</h1>
+            <br>
+            <br>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="name" class="form-control p-4" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="age" class="form-control p-4" placeholder="Your Age" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Gender</label><br>
+                                <input type="radio" name="gender" value="Male"> Male
+                                <input type="radio" name="gender" value="Female"> Female
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="location" class="form-control p-4" placeholder="Your Location" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="skills" class="form-control p-4" placeholder="Your Skills" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="education" class="form-control p-4" placeholder="Your Education" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="work_experience" class="form-control p-4" placeholder="Your Work Experience" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="certifications" class="form-control p-4" placeholder="Your Certifications" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="accomplishments" class="form-control p-4" placeholder="Your Accomplishments" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="email" name="email" class="form-control p-4" placeholder="Your Email">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="phone_number" class="form-control p-4" placeholder="Your Phone Number" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="file" name="image" class="form-control p-4"  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

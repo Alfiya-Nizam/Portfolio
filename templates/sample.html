@@ -1,0 +1,215 @@
+<!-- {% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form action="" method="POST" name="sentMessage" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="name" class="form-control p-4" id="name" placeholder="Your Name"
+                                    required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="age" class="form-control p-4" id="name" placeholder="Your Age"
+                                    required="required" data-validation-required-message="Please enter your Age" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <tr>
+                                <th>
+                                    <label>Gender</label>
+                                </th>
+                                <td>
+                                    <input type="radio" name="gender" value="Male">Male
+                                    <input type="radio" name="gender" value="Female">Female
+                                </td>
+                            </tr>
+
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="location" class="form-control p-4" id="name" placeholder="Your location"
+                                    required="required" data-validation-required-message="Please enter your location" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="skills" class="form-control p-4" id="name" placeholder="Your skills"
+                                    required="required" data-validation-required-message="Please enter your skills" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="education" class="form-control p-4" id="name" placeholder="Your education"
+                                    required="required" data-validation-required-message="Please enter your education" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="work_experience" class="form-control p-4" id="name" placeholder="Your work_experience"
+                                    required="required" data-validation-required-message="Please enter your work_experience" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="certifications" class="form-control p-4" id="name" placeholder="Your certifications"
+                                    required="required" data-validation-required-message="Please enter your certifications" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="accomplishments" class="form-control p-4" id="name" placeholder="Your accomplishments"
+                                    required="required" data-validation-required-message="Please enter your accomplishments" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            
+
+                            <div class="control-group col-sm-6">
+                                <input type="email" name="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                    required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" name="phone_number" class="form-control p-4" id="subject" placeholder="phone_number"
+                                required="required" data-validation-required-message="Please enter a phone_number" />
+                            <p class="help-block text-danger"></p>
+                        </div> -->
+
+
+                        <!-- <div class="control-group">
+                            <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                required="required"
+                                data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div> -->
+
+
+                        <!-- <div>
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- {% endblock %} -->
+<br>
+<br>
+<center><b>Portifolio</b></center>
+<br><br>
+<form >
+
+<table cellpadding="5px";>
+    <tr>
+        <th>
+            <label>Name</label>
+        </th>
+        <td><input type="text" name="name"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Age</label>
+        </th>
+        <td><input type="text" name="age"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Gender</label>
+        </th>
+        <td>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label>location</label>
+        </th>
+        <td><input type="text" name="location"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Skills</label>
+        </th>
+        <td><input type="text" name="skills"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Education</label>
+        </th>
+        <td><input type="text" name="education"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Work_experience</label>
+        </th>
+        <td><input type="text" name="work_experience"> </td>
+    </tr>
+
+    <tr>
+        <th>
+            <label>Certifications</label>
+        </th>
+        <td><input type="text" name="certifications"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>accomplishments</label>
+        </th>
+        <td><input type="text" name="accomplishments"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>Email</label>
+        </th>
+        <td><input type="text" name="email"> </td>
+    </tr>
+    <tr>
+        <th>
+            <label>phone_number</label>
+        </th>
+        <td><input type="text" name="phone_number"> </td>
+    </tr>
+
+
+    <tr>
+        <td><input type="submit" value="Submit">  </td>
+    </tr>
+</table>
+</form>
+
+
+
+
+
+
+<title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+    <p>Bio: {{ user_profile.bio }}</p>
+    <p>Job Title: {{ user_profile.job_title }}</p>
+    <p>Company: {{ user_profile.company }}</p>
+    <p>Education: {{ user_profile.education }}</p>
+    <p>Skills: {{ user_profile.skills }}</p>
+    <p>Interests: {{ user_profile.interests }}</p>
+
+    <h2>Contact Details</h2>
+    <p>Email: {{ user_profile.contactdetail.email }}</p>
+    <p>Phone Number: {{ user_profile.contactdetail.phone_number }}</p>
+    <p>Social Media: {{ user_profile.contactdetail.social_media }}</p>
+
+    <h2>Skill Endorsements</h2>
+    <ul>
+    {% for endorsement in skill_endorsements %}
+        <li>{{ endorsement.endorsed_by.username }} endorsed {{ endorsement.endorsed_user.user.username }}'s {{ endorsement.skill }}</li>
+    {% endfor %}
+    </ul>

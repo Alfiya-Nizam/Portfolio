@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row align-items-center">
+    {% for i in profiles %}
+    <div class="col-lg-2 pb-4 pb-lg-0">
+        <img class="img-fluid rounded w-10" src="{{i.image.url}}" alt="">
+    </div>
+    <div class="col-lg-7">
+        <h3 class="mb-4">Software Developer</h3>
+        <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor</p>
+        
+        <div class="row mb-3">
+            <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{i.name}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Age: <span class="text-secondary">{{i.age}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Gender: <span class="text-secondary">{{i.gender}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Location: <span class="text-secondary">{{i.location}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Skills: <span class="text-secondary">{{i.skills}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Education: <span class="text-secondary">{{i.education}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">{{i.work_experience}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Certifications: <span class="text-secondary">{{i.certifications}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>accomplishments: <span class="text-secondary">{{i.accomplishments}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">{{i.phone_number}}</span></h6></div>
+            <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{i.email}}</span></h6></div>
+           
+        </div>
+        <!-- <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
+        <a href="" class="btn btn-outline-primary">Learn More</a> -->
+    </div>
+    {% endfor %}
+
+
+
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        {% for edu in education %} 
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">{{edu.name}}</h5>
+                            <p class="mb-2"><strong>{{edu.university}}</strong> <br> <small>{{edu.sdate}}-{{edu.edate}}</small></p>
+                            <p>{{edu.mark}}</p>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Expericence</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        {% for exp in experience %}
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">{{exp.name}}</h5>
+                            <p></p>{{exp.location}}</p>
+                            <p class="mb-2">{{exp.sdate}}-{{exp.edate}}</p>
+                            <p></p>{{exp.description}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-5" id="service">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Project</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My project</h1>
+        </div>
+        <center>
+
+        <div class="row pb-3">
+            {% for project in projects %}
+            <div class="col-lg-4 col-md-6 text-center mb-5" >
+                <div class="d-flex align-items-center justify-content-center mb-4" style="text-align: center;">
+                    <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                    <h4 class="font-weight-bold m-0">{{project.name}}</h4>
+                </div>
+                <p>{{project.description}}</p>
+                <a class="border-bottom border-primary text-decoration-none" href="">Github link</a>
+            </div>
+            {% endfor %}
+        </div>
+    </center>
+    </div>    
+
+
+</div>
+
+{% endblock %}
